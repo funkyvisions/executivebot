@@ -36,7 +36,18 @@ app.post('/webhook/', function (req, res) {
 				sendGenericMessage(sender)
 				continue
 			}
-			sendTextMessage(sender, "Be great today!")
+			
+			r = random(0,3)
+			if (r == 0) {
+				sendTextMessage(sender, "Be great today!")
+			} else if (r == 1) {
+				sendTextMessage(sender, "Be great today1!")
+			} else if (r == 2) {
+				sendTextMessage(sender, "Be great today2!")
+			} else if (r == 3) {
+				sendTextMessage(sender, "Be great today3!")
+			}	
+
 // 			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 		}
 		if (event.postback) {
@@ -118,6 +129,10 @@ function sendGenericMessage(sender) {
 			console.log('Error: ', response.body.error)
 		}
 	})
+}
+
+function random (low, high) {
+    return Math.floor(Math.random() * (high - low + 1) + low);
 }
 
 // spin spin sugar
