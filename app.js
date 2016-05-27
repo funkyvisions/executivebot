@@ -37,12 +37,12 @@ app.post('/webhook/', function (req, res) {
 				continue
 			}
 			
-			r = random(0,9)
-			if (r == 0) {
+// 			r = random(0,9)
+// 			if (r == 0) {
 				sendTextMessage(sender, "Be great today!");
-			} else
-				sendTextMessage(sender, buzzword());
-			}	
+// 			} else
+// 				sendTextMessage(sender, buzzword());
+// 			}	
 
 // 			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 		}
