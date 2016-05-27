@@ -40,7 +40,7 @@ app.post('/webhook/', function (req, res) {
 			r = random(0,9)
 			if (r == 0) {
 				sendTextMessage(sender, "Be great today!")
-			} else
+			} else {
 				sendTextMessage(sender, buzzword())
 			}	
 
