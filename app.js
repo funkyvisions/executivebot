@@ -37,14 +37,13 @@ app.post('/webhook/', function (req, res) {
 				continue
 			}
 			
-// 			r = random(0,4)
-// 			if (r == 0) {
-// 				sendTextMessage(sender, "I want you to be great today!")
-// 			} else {
-// 				sendTextMessage(sender, "I want you to " + buzzword() + ".")
-// 			}	
+			r = random(0,4)
+			if (r == 0) {
+				sendTextMessage(sender, "I want you to be great today!")
+			} else {
+				sendTextMessage(sender, "I want you to " + buzzword() + ".")
+			}	
 
-			sendTextMessage(sender, "So you'll approve a chatbot that ONLY SAYS HODOR, but you won't approve mine that responds with Executive Speak?  I give up!")
 // 			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 		}
 		if (event.postback) {
